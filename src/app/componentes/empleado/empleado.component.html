@@ -24,10 +24,36 @@
                         <th>Nombre y apellido</th>
                         <th>Usuario</th>
                         <th>Email</th>
-                        <th>Puesto</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
+
+                    <tr *ngFor="let empleado of empleadoService.empleados">
+
+                        <td>
+                            {{empleado.apellido}}, {{empleado.nombre}}
+                        </td>
+
+                        <td>
+                            {{empleado.usuario}}
+                        </td>
+
+                        <td>
+                            {{empleado.email}}
+                        </td>
+
+                        <td>
+                            <button class="btn btn-danger m-1">
+                                <i class="material-icons">edit</i>
+                            </button>
+
+                            <button class="btn btn-secondary m-1">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </td>
+
+                    </tr>
 
                 </tbody>
             </table>
